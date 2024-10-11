@@ -41,16 +41,25 @@
     window.onload = function () {
       document.getElementById('contact-form').addEventListener('submit', function (event) {
         event.preventDefault();
+        const thisForm = this;  // Reference to the form
+        const loadingMessage = thisForm.querySelector('.loading');
+        const successMessage = thisForm.querySelector('.sent-message');
+        const errorMessage = thisForm.querySelector('.error-message');
+
+        // Show loading message and hide success/error messages
+        loadingMessage.classList.add('d-block');
+        errorMessage.classList.remove('d-block');
+        successMessage.classList.remove('d-block');
         // these IDs from the previous steps
         emailjs.sendForm('service_3g9q9z4', 'contact_form', this)
-          .then(function (response) {
-            console.log('SUCCESS!', response.status, response.text);
-            loadingMessage.style.display = 'none';  // Hide loading message
-            successMessage.style.display = 'block';  // Show success message
-          }, function (error) {
+          .then(() => {
+            console.log('SUCCESS!');
+            loadingMessage.classList.remove('d-block');  // Hide loading message
+            successMessage.classList.add('d-block');  // Show success message
+          }, (error) => {
             console.log('FAILED...', error);
-            loadingMessage.style.display = 'none';  // Hide loading message
-            errorMessage.style.display = 'block';  // Show error message
+            loadingMessage.classList.remove('d-block');  // Hide loading message
+            errorMessage.classList.add('d-block');  // Show error message
           });
       });
     }

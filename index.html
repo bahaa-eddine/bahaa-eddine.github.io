@@ -28,8 +28,29 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init({
+        publicKey: "OTaL0MA-ZZC6yCXZi",
+      });
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        // these IDs from the previous steps
+        emailjs.sendForm('service_3g9q9z4', 'contact_form', this)
+          .then(() => {
+            console.log('SUCCESS!');
+          }, (error) => {
+            console.log('FAILED...', error);
+          });
+      });
+    }
+  </script>
   <!-- =======================================================
   * Template Name: MyResume
   * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
@@ -168,7 +189,8 @@
                 <li><strong>Education:</strong> Ph.D. in Informatics & AI</li>
                 <li><strong>Availability:</strong> Open for collaboration and freelance work</li>
                 <li><strong>Location:</strong> Morocco</li>
-                <li><strong>Work Philosophy:</strong> Combining academic research with industry practice to drive innovation</li>
+                <li><strong>Work Philosophy:</strong> Combining academic research with industry practice to drive
+                  innovation</li>
               </ul>
             </div>
 
@@ -199,7 +221,9 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Services</h2>
-        <p>I provide a wide range of professional services focused on Artificial Intelligence, DevOps, Software Architecture, and Digital Transformation. With over 5 years of experience, my mission is to help businesses leverage cutting-edge technology to drive innovation and efficiency.</p>
+        <p>I provide a wide range of professional services focused on Artificial Intelligence, DevOps, Software
+          Architecture, and Digital Transformation. With over 5 years of experience, my mission is to help businesses
+          leverage cutting-edge technology to drive innovation and efficiency.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -219,7 +243,8 @@
               <a href="#" class="stretched-link">
                 <h3>Trainer</h3>
               </a>
-              <p>Providing training on advanced topics like AI, DevOps, software development, and cloud computing. I offer personalized training programs for junior developers, students, and professionals.</p>
+              <p>Providing training on advanced topics like AI, DevOps, software development, and cloud computing. I
+                offer personalized training programs for junior developers, students, and professionals.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -236,7 +261,8 @@
               <a href="#" class="stretched-link">
                 <h3>Software Architecture & Development</h3>
               </a>
-              <p>Building robust software systems using modern architecture practices such as microservices and reactive programming. Expertise in Java, Spring Boot, and React for full-stack solutions.</p>
+              <p>Building robust software systems using modern architecture practices such as microservices and reactive
+                programming. Expertise in Java, Spring Boot, and React for full-stack solutions.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -253,7 +279,8 @@
               <a href="#" class="stretched-link">
                 <h3>AI & Data Governance</h3>
               </a>
-              <p>Ensuring the security and governance of data in AI systems. I offer expertise in DataOps and DevSecOps, ensuring compliance with regulations while maintaining data integrity and security.</p>
+              <p>Ensuring the security and governance of data in AI systems. I offer expertise in DataOps and DevSecOps,
+                ensuring compliance with regulations while maintaining data integrity and security.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -270,7 +297,8 @@
               <a href="#" class="stretched-link">
                 <h3>AI & Machine Learning</h3>
               </a>
-              <p>Leveraging AI and Machine Learning to deliver innovative solutions in data profiling, prediction models, and personalized systems. My research focuses on real-world applications of AI.</p>
+              <p>Leveraging AI and Machine Learning to deliver innovative solutions in data profiling, prediction
+                models, and personalized systems. My research focuses on real-world applications of AI.</p>
               <a href="#" class="stretched-link"></a>
             </div>
           </div><!-- End Service Item -->
@@ -288,7 +316,8 @@
               <a href="#" class="stretched-link">
                 <h3>DevSecOps & Cloud Solutions</h3>
               </a>
-              <p>Designing and deploying scalable cloud architectures and implementing DevOps best practices to automate and optimize workflows. Specialized in Docker, Kubernetes, and CI/CD pipelines.</p>
+              <p>Designing and deploying scalable cloud architectures and implementing DevOps best practices to automate
+                and optimize workflows. Specialized in Docker, Kubernetes, and CI/CD pipelines.</p>
               <a href="#" class="stretched-link"></a>
             </div>
           </div><!-- End Service Item -->
@@ -306,7 +335,9 @@
               <a href="#" class="stretched-link">
                 <h3>Mentorship</h3>
               </a>
-              <p>Mentoring and guiding aspiring engineers and developers in their career paths, helping them navigate technical challenges, build strong foundations in AI, DevOps, and software architecture, and prepare for future leadership roles.</p>
+              <p>Mentoring and guiding aspiring engineers and developers in their career paths, helping them navigate
+                technical challenges, build strong foundations in AI, DevOps, and software architecture, and prepare for
+                future leadership roles.</p>
               <a href="#" class="stretched-link"></a>
             </div>
           </div><!-- End Service Item -->
@@ -362,29 +393,29 @@
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
                 </div>
-          
+
                 <div class="col-md-6">
                   <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
                 </div>
-          
+
                 <div class="col-md-12">
                   <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
                 </div>
-          
+
                 <div class="col-md-12">
                   <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
                 </div>
-          
+
                 <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
-          
+
                   <button type="submit">Send Message</button>
                 </div>
               </div>
             </form>
-          </div><!-- End Contact Form -->          
+          </div><!-- End Contact Form -->
 
         </div>
 
@@ -397,7 +428,8 @@
   <footer id="footer" class="footer position-relative light-background">
     <div class="container">
       <h3 class="sitename">Prof. Bahaa Eddine ELBAGHAZAOUI</h3>
-      <p>I look forward to receiving your message and will get back to you as soon as possible. Feel free to reach out for any inquiries or collaboration opportunities.</p>
+      <p>I look forward to receiving your message and will get back to you as soon as possible. Feel free to reach out
+        for any inquiries or collaboration opportunities.</p>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
         <a href=""><i class="bi bi-facebook"></i></a>
@@ -438,7 +470,6 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="forms/email.js"></script>
 
 
   <!-- Main JS File -->

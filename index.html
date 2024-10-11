@@ -43,7 +43,7 @@
         event.preventDefault();
         // these IDs from the previous steps
         emailjs.sendForm('service_3g9q9z4', 'contact_form', this)
-          .then(() => {
+          .then( () => {
             console.log('SUCCESS!');
           }, (error) => {
             console.log('FAILED...', error);

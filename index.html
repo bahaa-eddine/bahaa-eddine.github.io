@@ -43,10 +43,14 @@
         event.preventDefault();
         // these IDs from the previous steps
         emailjs.sendForm('service_3g9q9z4', 'contact_form', this)
-          .then(() => {
-            console.log('SUCCESS!');
-          }, (error) => {
+          .then(function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+            loadingMessage.style.display = 'none';  // Hide loading message
+            successMessage.style.display = 'block';  // Show success message
+          }, function (error) {
             console.log('FAILED...', error);
+            loadingMessage.style.display = 'none';  // Hide loading message
+            errorMessage.style.display = 'block';  // Show error message
           });
       });
     }

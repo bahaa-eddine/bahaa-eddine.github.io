@@ -38,16 +38,34 @@
     })();
   </script>
   <script type="text/javascript">
+    // Function to show success or error message
+    function displayMessage(type) {
+      if (type === 'success') {
+        document.querySelector('.sent-message').style.display = 'block';
+        setTimeout(() => {
+          document.querySelector('.sent-message').style.display = 'none';
+        }, 5000); // Message disappears after 5 seconds
+      } else if (type === 'error') {
+        document.querySelector('.error-message').style.display = 'block';
+        setTimeout(() => {
+          document.querySelector('.error-message').style.display = 'none';
+        }, 5000); // Message disappears after 5 seconds
+      }
+    }
     window.onload = function () {
       document.getElementById('contact-form').addEventListener('submit', function (event) {
         event.preventDefault();
         // these IDs from the previous steps
-        emailjs.sendForm('service_3g9q9z4', 'contact_form', this)
-          .then( () => {
+        emailjs.sendForm('service_3g9q9z4', 'template_gzcmrgq', '#myForm').then(
+          (response) => {
             console.log('SUCCESS!');
-          }, (error) => {
+            displayMessage('success'); // Show success message
+          },
+          (error) => {
             console.log('FAILED...', error);
-          });
+            displayMessage('error'); // Show error message
+          }
+        );
       });
     }
   </script>

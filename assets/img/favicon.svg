@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer Circle representing global reach or holistic knowledge -->
+  <circle cx="100" cy="100" r="90" stroke="#0057e7" stroke-width="8" fill="none" />
+
+  <!-- Initials in the center -->
+  <text x="50%" y="50%" font-size="48" text-anchor="middle" fill="#0057e7" font-family="Arial, sans-serif" dy=".35em">
+    BEE
+  </text>
+</svg>

@@ -14,7 +14,7 @@
     loadingMessage.style.display = 'block';  // Show loading message
   
     // Send email using EmailJS
-    emailjs.sendForm('service_5q3fxgo', 'template_gzcmrgq', this)
+    emailjs.sendForm('service_3g9q9z4', 'template_gzcmrgq', this)
       .then(function(response) {
         console.log('SUCCESS!', response.status, response.text);
         loadingMessage.style.display = 'none';  // Hide loading message

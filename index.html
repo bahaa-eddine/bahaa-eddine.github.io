@@ -56,7 +56,7 @@
       document.getElementById('contact-form').addEventListener('submit', function (event) {
         event.preventDefault();
         // these IDs from the previous steps
-        emailjs.sendForm('service_3g9q9z4', 'template_gzcmrgq', 'contact-form').then(
+        emailjs.sendForm('service_3g9q9z4', 'template_gzcmrgq', '#contact-form').then(
           (response) => {
             console.log('SUCCESS!');
             displayMessage('success'); // Show success message

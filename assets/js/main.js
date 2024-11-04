@@ -227,3 +227,8 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+function scrollToNextSection() {
+  const nextSection = document.getElementById("about");
+  nextSection.scrollIntoView({ behavior: "smooth" });
+}

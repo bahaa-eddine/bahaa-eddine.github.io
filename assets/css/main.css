@@ -77,14 +77,21 @@ a:hover {
   text-decoration: none;
 }
 
+p.decore {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
+  color: #fff;
   font-family: var(--heading-font);
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
 }
 
 /* PHP Email Form Messages
@@ -568,14 +575,34 @@ section,
   margin-top: 25px;
 }
 
-.hero .social-links a {
-  font-size: 20px;
+.hero .social-links a i.custom-icon {
+  width: 40px; /* Explicitly set width */
+  height: 40px; /* Explicitly set height */
   display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  background-size: contain; /* Ensures SVG scales within bounds */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: center; /* Centers SVG */
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
 }
+
+.linkedin-icon {
+  background-image: url("assets/img/svg/linkedin.svg");
+}
+
+.researchgate-icon {
+  background-image: url("assets/img/svg/researchgate.svg");
+}
+
+.scopus-icon {
+  background-image: url("assets/img/svg/scopus.svg");
+}
+
+.google-icon {
+  background-image: url("assets/img/svg/google.svg");
+}
+
 
 .hero .social-links a:hover {
   color: var(--accent-color);

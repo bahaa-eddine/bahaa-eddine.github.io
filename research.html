@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-69RX31DGZW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-69RX31DGZW');
+  </script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Prof. BE. ELBAGHAZAOUI - Research</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.svg" rel="icon">
+  <link href="assets/img/favicon.svg" rel="favicon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init({
+        publicKey: "OTaL0MA-ZZC6yCXZi",
+      });
+    })();
+  </script>
+  <script type="text/javascript">
+    // Function to show success or error message
+    function displayMessage(type) {
+      if (type === 'success') {
+        document.querySelector('.sent-message').style.display = 'block';
+        setTimeout(() => {
+          document.querySelector('.sent-message').style.display = 'none';
+        }, 5000); // Message disappears after 5 seconds
+      } else if (type === 'error') {
+        document.querySelector('.error-message').style.display = 'block';
+        setTimeout(() => {
+          document.querySelector('.error-message').style.display = 'none';
+        }, 5000); // Message disappears after 5 seconds
+      }
+    }
+    window.onload = function () {
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        // these IDs from the previous steps
+        emailjs.sendForm('service_3g9q9z4', 'template_gzcmrgq', '#contact-form').then(
+          (response) => {
+            console.log('SUCCESS!');
+            displayMessage('success'); // Show success message
+          },
+          (error) => {
+            console.log('FAILED...', error);
+            displayMessage('error'); // Show error message
+          }
+        );
+      });
+    }
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-T7BVKB93');</script>
+  <!-- End Google Tag Manager -->
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7BVKB93" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li class="sec"><a href="index.html"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li class="sec"><a href="resume.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li class="sec"><a href="research.html" class="active"><i
+              class="bi bi-mortarboard navicon"></i><span>Research</span></a></li>
+      </ul>
+      <ul>
+        <li><a href="#journal" class="active"><i class="bi bi-journal navicon"></i><span>Journals</span></a>
+        </li>
+        <li><a href="#chapter"><i class="bi bi-file-earmark-text navicon"></i><span>Chapters</span></a></li>
+        <li><a href="#conference"><i class="bi bi-people navicon"></i><span>Conf.</span></a></li>
+        <li><a href="#review"><i class="bi bi-binoculars navicon"></i><span>Reviews</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- journal Section -->
+    <section id="journal" class="journal section">
+      <!-- journal Section -->
+      <section id="journal" class="journal section">
+        <div class="container section-title" data-aos="fade-up">
+          <div class="row">
+            <h2>Article journals</h2>
+            <ul class="contributions journal">
+              <li>Elbaghazaoui, Bahaa Eddine, Mohamed Amnai, and Youssef Fakhri. "Predicting the next word using the
+                Markov chain model according to profiling personality." <i>The Journal of Supercomputing</i> (2023):
+                1-16. Q1, IF 3.3; CiteScore: 4.8; SNIP: 1.16. DOI: <a href="https://doi.org/10.1007/s11227-023-05125-2"
+                  target="_blank">10.1007/s11227-023-05125-2</a>.</li>
+              <li>Elbaghazaoui, Bahaa Eddine, Mohamed Amnai, and Youssef Fakhri. "Predicting user behavior using data
+                profiling and hidden Markov model." <i>International Journal of Electrical & Computer Engineering</i>
+                13.5 (2023). Q2. CiteScore: 3.8; SNIP: 0.704. DOI: <a
+                  href="https://doi.org/10.11591/ijece.v13i5.pp5444-5453"
+                  target="_blank">10.11591/ijece.v13i5.pp5444-5453</a>.</li>
+              <li>Elbaghazaoui, Bahaa Eddine, Mohamed Amnai, and Youssef Fakhri. "Data profiling and machine learning to
+                identify influencers from social media platforms." <i>Journal of ICT Standardization</i> (2022):
+                201-218. Q3. CiteScore: 0.6; SNIP: 0.34. DOI: <a href="https://doi.org/10.13052/jicts2245-800X.1026"
+                  target="_blank">10.13052/jicts2245-800X.1026</a>.</li>
+              <li>Semmouri, A., Jourhmane, M., Elbaghazaoui, B.E. "Markov decision processes with discounted costs: New
+                test of non-optimal actions." <i>Journal of Advanced Research in Dynamical and Control Systems</i>,
+                2020, 12(5 Special Issue), pp. 608–616. Q3. CiteScore: 0.6; SNIP: 0.34.</li>
+              <li>Semmouri, A., Jourhmane, M., Elbaghazaoui, B.E. "Discounted Markov decision processes with constrained
+                costs: The decomposition approach." <i>E3S Web of Conferences</i> Q4. 2021, 229, 01047.</li>
+            </ul>
+          </div>
+      </section>
+    </section><!-- /Resume Section -->
+
+    <!-- chapter Section -->
+    <section id="chapter" class="chapter section">
+      <!-- chapter Section -->
+      <section id="chapter" class="chapter section">
+        <div class="container section-title" data-aos="fade-up">
+          <div class="row">
+            <h2>Chapters</h2>
+            <ul class="contributions chapter">
+              <li>Elbaghazaoui, Bahaa Eddine, Mohamed Amnai, and Youssef Fakhri. "Influencer Profiling to Identify the
+                Top Keywords Using LDA." <i>Computer Networks and Inventive Communication Technologies</i>. Singapore:
+                Springer Nature Singapore, 2022. 377-388.</li>
+              <li>Elbaghazaoui, Bahaa Eddine, Mohamed Amnai, and Youssef Fakhri. "Voice Recognition and User Profiling."
+                <i>International Conference on Cybersecurity, Cybercrimes, and Smart Emerging Technologies</i>. Cham:
+                Springer International Publishing, 2022.
+              </li>
+              <li>Elbaghazaoui, Bahaa Eddine, Mohamed Amnai, and Youssef Fakhri. "Optimized influencers profiling from
+                social media based on Machine Learning." <i>Advances in Information, Communication and
+                  Cybersecurity</i>. Springer International Publishing, 2022.</li>
+              <li>Elbaghazaoui, Bahaa Eddine, Mohamed Amnai, and Youssef Fakhri. "User Profiling and Influence
+                Maximization." <i>Mobile Computing and Sustainable Informatics</i>. Singapore: Springer Nature
+                Singapore, 2022. 221-232.</li>
+              <li>Elbaghazaoui, Bahaa Eddine, Mohamed Amnai, and Abdellatif Semmouri. "Data profiling over big data
+                area: a survey of big data profiling: state-of-the-art, use cases and challenges." <i>Intelligent
+                  Systems in Big Data, Semantic Web and Machine Learning</i>. Cham: Springer International Publishing,
+                2021. 111-123.</li>
+              <li>Semmouri, A., Jourhmane, M., Elbaghazaoui, B.E. "Markov Decision Processes with Discounted Rewards:
+                Improved Successive Over-Relaxation Method." <i>Lecture Notes in Networks and Systems</i>, 2022, 357
+                LNNS, pp. 229–238.</li>
+              <li>Semmouri, A., Jourhmane, M., Elbaghazaoui, B.E. "Markov Decision Processes with Discounted Rewards:
+                New Action Elimination Procedure." <i>Lecture Notes in Business Information Processing</i>, 2021, 416
+                LNBIP, pp. 223–238.</li>
+            </ul>
+          </div>
+      </section>
+    </section><!-- /Resume Section -->
+
+
+    <!-- conference Section -->
+    <section id="conference" class="conference section">
+      <!-- conference Section -->
+      <section id="conference" class="conference section">
+        <div class="container section-title" data-aos="fade-up">
+          <div class="row">
+            <h2>Conferences</h2>
+            <ul class="contributions conference">
+              <li>Elbaghazaoui, Bahaa Eddine, et al. "Event Profiling in Social Media: A Survey with an Application."
+                <i>2024 IEEE 4th International Conference on Innovative Research in Applied Science, Engineering and
+                  Technology (IRASET’2024)</i>. IEEE, 2024.
+              </li>
+              <li>Elbaghazaoui, Bahaa Eddine, et al. "Profiling Language Sign Using Deep Learning." <i>10th
+                  International Conference on Wireless Networks and Mobile Communications (WINCOM)</i>. IEEE, 2023.</li>
+              <li>Elbaghazaoui, Bahaa Eddine, et al. "Human profiling based on computer vision: A survey with
+                application." <i>2022 IEEE 3rd International Conference on Electronics, Control, Optimization and
+                  Computer Science (ICECOCS)</i>. IEEE, 2022.</li>
+              <li>Elbaghazaoui, Bahaa Eddine, Mohamed Amnai, and Youssef Fakhri. "Influencer Profiling to Identify the
+                Top Keywords Using LDA." <i>Computer Networks and Inventive Communication Technologies: Proceedings of
+                  Fifth ICCNCT 2022</i>. Singapore: Springer Nature Singapore, 2022, 377-388.</li>
+              <li>Elbaghazaoui, Bahaa Eddine, Mohamed Amnai, and Youssef Fakhri. "User Profiling and Influence
+                Maximization." <i>Mobile Computing and Sustainable Informatics: Proceedings of ICMCSI 2022</i>.
+                Singapore: Springer Nature Singapore, 2022, 221-232.</li>
+              <li>Elbaghazaoui, Bahaa Eddine, Mohamed Amnai, and Youssef Fakhri. "Voice Recognition and User Profiling."
+                <i>International Conference on Cybersecurity, Cybercrimes, and Smart Emerging Technologies</i>. Cham:
+                Springer International Publishing, 2022.
+              </li>
+              <li>Elbaghazaoui, Bahaa Eddine, Mohamed Amnai, and Youssef Fakhri. "Optimized influencers profiling from
+                social media based on Machine Learning." <i>Advances in Information, Communication and Cybersecurity:
+                  Proceedings of ICI2C’21</i>. Springer International Publishing, 2022.</li>
+              <li>Semmouri, A., Jourhmane, M., and Elbaghazaoui, B.E. "Markov Decision Processes with Discounted Costs:
+                Improved Successive Over-Relaxation Method." <i>Proceedings of the International Conference on
+                  Intelligent Vision and Computing</i>, 392-402, 2021.</li>
+              <li>Semmouri, A., Jourhmane, M., and Elbaghazaoui, B.E. "Markov Decision Processes with Discounted
+                Rewards: New Action Elimination Procedure." <i>International Conference on Business Intelligence</i>,
+                223-238, 2021.</li>
+              <li>Semmouri, A., Jourhmane, M., and Elbaghazaoui, B.E. "Discounted Markov Decision Processes with
+                Constrained Costs: The Decomposition Approach." <i>E3S Web of Conferences</i>, 229, 01047, 2021.</li>
+            </ul>
+      </section>
+    </section><!-- /Resume Section -->
+
+    <!-- review Section -->
+    <section id="review" class="review section">
+      <!-- review Section -->
+      <section id="review" class="review section">
+        <div class="container section-title" data-aos="fade-up">
+          <div class="row">
+            <h2>Reviews</h2>
+            <ul class="contributions conference">
+              <ul class="reviewer">
+                <li>Peer review:</li>
+                <ul>
+                  <li>Applied Intelligence (22)</li>
+                  <li>Education and Information Technologies (9)</li>
+                  <li>International Journal of Information Security and Privacy (2)</li>
+                  <li>Soft Computing (6)</li>
+                  <li>The Journal of Supercomputing (3)</li>
+                  <li>Frontiers in Digital Health (1)</li>
+                </ul>
+              </ul>
+              <ul class="contributions review-tpc">
+                <li>Conference review:</li>
+                <ul>
+                  <li>2022 IEEE World Conference on Applied Intelligence and Computing, 6/17/2022, Sonbhadra, India. <a
+                      href="https://www.aic2022.scrs.in/" target="_blank">View Details</a>.</li>
+                  <li>2023 IEEE World Conference on Applied Intelligence and Computing, 7/29/2023, Sonbhadra, India. <a
+                      href="https://aic2023.scrs.in/" target="_blank">View Details</a>.</li>
+                  <li>2nd International Conference on Advances in Data-driven Computing and Intelligent Systems,
+                    9/21/2023, Goa, India. <a href="https://scrs.in/conference/adcis23" target="_blank">View
+                      Details</a>.</li>
+                  <li>5th International Conference on Sustainable and Innovative Solutions for Current Challenges in
+                    Engineering & Technology, 10/20/2023, Gwalior, India. <a
+                      href="https://scrs.in/conference/icsiscet2023" target="_blank">View Details</a>.</li>
+                  <li>International Conference on Computational Intelligence, 11/4/2023, Delhi, India. <a
+                      href="https://scrs.in/conference/icci2023" target="_blank">View Details</a>.</li>
+                  <li>Congress on Smart Computing Technologies, 12/2/2023, New Delhi, India. <a
+                      href="https://scril.sau.int/csct23/" target="_blank">View Details</a>.</li>
+                  <li>6th International Conference on Communication and Computational Technologies, 1/12/2024, RIET
+                    Jaipur, India. <a href="https://scrs.in/conference/iccct2024" target="_blank">View Details</a>.</li>
+                  <li>2nd Congress on Control, Robotics, and Mechatronics, 2/3/2024, New Delhi, India. <a
+                      href="https://scrs.in/conference/crm2024" target="_blank">View Details</a>.</li>
+                  <li>5th World Conference on Artificial Intelligence: Advances and Applications, 2/24/2024, Udaipur,
+                    India. <a href="https://scrs.in/conference/wcaiaa2024" target="_blank">View Details</a>.</li>
+                  <li>International Conference on Computing and Machine Learning, 3/29/2024, Sikkim, India. <a
+                      href="https://scrs.in/conference/cml2024" target="_blank">View Details</a>.</li>
+                  <li>International Conference on Business Intelligence and Data Analytics, 4/5/2024, RVIM Bangalore,
+                    India. <a href="https://scrs.in/conference/bida2024" target="_blank">View Details</a>.</li>
+                  <li>4th International Conference on Paradigms of Communication, Computing and Data Analytics,
+                    4/20/2024, Rishikesh, India. <a href="https://scrs.in/conference/pccda2024" target="_blank">View
+                      Details</a>.</li>
+                  <li>International Conference on Sustainable Computing and Intelligent Systems, 5/3/2024, Canberra,
+                    Australia. <a href="https://scrs.in/conference/scis2024" target="_blank">View Details</a>.</li>
+                  <li>4th International Conference on Computer Vision and Robotics, 5/24/2024, Pune, India. <a
+                      href="https://scrs.in/conference/cvr2024" target="_blank">View Details</a>.</li>
+                  <li>World Congress on Smart Computing, 6/8/2024, Lucknow, India. <a
+                      href="https://scrs.in/conference/wcsc2024" target="_blank">View Details</a>.</li>
+                  <li>5th International Conference on Data Science and Applications, 7/17/2024, Jaipur, India. <a
+                      href="https://scrs.in/conference/ICDSA2024" target="_blank">View Details</a>.</li>
+                  <li>The 4th International Conference on Electrical, Computer and Energy Technologies, 7/18/2024,
+                    Sydney, Australia. <a href="http://www.icecet.com/2024" target="_blank">View Details</a>.</li>
+                  <li>2024 IEEE World Conference on Applied Intelligence and Computing, 7/27/2024, Gwalior, India. <a
+                      href="https://scrs.in/conference/aic2024" target="_blank">View Details</a>.</li>
+                  <li>2nd International Conference on Artificial Intelligence: Theory and Applications, 8/8/2024,
+                    Bangalore, India. <a href="https://scrs.in/conference/AITA2024" target="_blank">View Details</a>.
+                  </li>
+                  <li>5th Congress on Intelligent Systems, 9/5/2024, Bangalore, India. <a
+                      href="https://scrs.in/conference/cis2024" target="_blank">View Details</a>.</li>
+                  <li>3rd International Conference on Advances in Data-driven Computing and Intelligent Systems,
+                    9/20/2024, Goa, India. <a href="https://scrs.in/conference/adcis2024" target="_blank">View
+                      Details</a>.</li>
+                  <li>International Conference on Information Technology and Intelligence, 10/14/2024, Port Blair,
+                    India. <a href="https://scrs.in/conference/iti2024" target="_blank">View Details</a>.</li>
+                  <li>6th International Conference on Sustainable and Innovative Solutions for Current Challenges in
+                    Engineering & Technology, 10/26/2024, Gwalior, India. <a
+                      href="https://scrs.in/conference/icsiscet2024" target="_blank">View Details</a>.</li>
+                  <li>The 4th International Conference on Electrical, Computer, Communications and Mechatronics
+                    Engineering, 11/3/2024, Male, Maldives. <a href="https://www.iceccme.com" target="_blank">View
+                      Details</a>.</li>
+                  <li>6th International Conference on Communication and Intelligent Systems, 11/8/2024, Bhopal, India.
+                    <a href="https://scrs.in/conference/iccis2024" target="_blank">View Details</a>.</li>
+                  <li>International Conference on Electrical and Computer Engineering Researches, 12/4/2024, Gaborone,
+                    Botswana. <a href="http://www.icecer.com" target="_blank">View Details</a>.</li>
+                  <li>5th International Conference on Paradigms of Communication, Computing and Data Analytics,
+                    1/18/2025, Rishikesh, India. <a href="https://scrs.in/conference/pccda2025" target="_blank">View
+                      Details</a>.</li>
+                  <li>International Conference on Information Technology and Artificial Intelligence, 1/24/2025,
+                    Gurugram, India. <a href="https://scrs.in/conference/itai2025" target="_blank">View Details</a>.
+                  </li>
+                  <li>3rd Congress on Control, Robotics, and Mechatronics, 2/1/2025, Warangal, India. <a
+                      href="https://scrs.in/conference/crm2025" target="_blank">View Details</a>.</li>
+                  <li>7th International Conference on Communication and Computational Technologies, 2/13/2025, Goa,
+                    India. <a href="https://scrs.in/conference/iccct2025" target="_blank">View Details</a>.</li>
+                  <li>2nd World Congress on Smart Computing, 2/22/2025, Lucknow, India. <a
+                      href="https://scrs.in/conference/wcsc2025" target="_blank">View Details</a>.</li>
+                </ul>
+              </ul>
+          </div>
+      </section>
+    </section><!-- /Resume Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>Beni Mellal, Morocco</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Me</h3>
+                <p>+212 6 68 70 22 02</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Me</h3>
+                <p>elbaghazaoui.bahaa@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message">An error has been occured. Send message directely!</div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Prof. Bahaa Eddine ELBAGHAZAOUI</h3>
+      <p>I look forward to receiving your message and will get back to you as soon as possible. Feel free to reach out
+        for any inquiries or collaboration opportunities.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/bahaa-eddine/" title="LinkedIn">
+          <i class="custom-icon linkedin-icon"></i>
+        </a>
+        <a href="https://www.researchgate.net/profile/Bahaa-Eddine-Elbaghazaoui" title="ResearchGate">
+          <i class="custom-icon researchgate-icon"></i>
+        </a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=57218899003" title="Scopus">
+          <i class="custom-icon scopus-icon"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=l1bQFdEAAAAJ&hl" title="Google Scholar">
+          <i class="custom-icon google-icon"></i>
+        </a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">BE ELBAGHAZAOUI</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

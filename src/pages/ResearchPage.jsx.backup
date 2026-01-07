@@ -1,0 +1,259 @@
+import { motion } from 'framer-motion';
+import { FaBook, FaFileAlt, FaUsers, FaLightbulb } from 'react-icons/fa';
+import { SiResearchgate, SiScopus, SiGooglescholar } from 'react-icons/si';
+import './ResearchPage.css';
+
+const ResearchPage = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  return (
+    <div className="research-page">
+      <motion.div
+        className="research-header"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h1>Research & Publications</h1>
+        <p className="research-subtitle">
+          Advancing the frontiers of Artificial Intelligence, Machine Learning, and Software Engineering
+        </p>
+
+        <div className="research-profiles">
+          <a
+            href="https://www.researchgate.net/profile/Bahaa-Eddine-Elbaghazaoui"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="profile-link"
+          >
+            <SiResearchgate /> ResearchGate
+          </a>
+          <a
+            href="https://www.scopus.com/authid/detail.uri?authorId=57218899003"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="profile-link"
+          >
+            <SiScopus /> Scopus
+          </a>
+          <a
+            href="https://scholar.google.com/citations?user=l1bQFdEAAAAJ&hl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="profile-link"
+          >
+            <SiGooglescholar /> Google Scholar
+          </a>
+        </div>
+      </motion.div>
+
+      <div className="research-content">
+        <motion.section
+          className="research-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="section-header" variants={itemVariants}>
+            <FaLightbulb className="section-icon" />
+            <h2>Research Interests</h2>
+          </motion.div>
+
+          <motion.div className="interests-grid" variants={itemVariants}>
+            <div className="interest-card">
+              <h3>Artificial Intelligence & Machine Learning</h3>
+              <p>
+                Exploring advanced machine learning algorithms, deep learning architectures, and their
+                applications in solving real-world problems. Focus on developing intelligent systems
+                that can learn, adapt, and make decisions autonomously.
+              </p>
+            </div>
+
+            <div className="interest-card">
+              <h3>Data Governance & Security</h3>
+              <p>
+                Investigating frameworks and methodologies for ensuring data quality, privacy, and
+                security in AI systems. Developing solutions for compliance with data protection
+                regulations while maintaining system performance.
+              </p>
+            </div>
+
+            <div className="interest-card">
+              <h3>DevSecOps & Cloud Computing</h3>
+              <p>
+                Researching integration of security practices into DevOps workflows, automated security
+                testing, and secure cloud infrastructure design. Focus on building resilient and
+                secure distributed systems.
+              </p>
+            </div>
+
+            <div className="interest-card">
+              <h3>Software Architecture & Design</h3>
+              <p>
+                Studying modern architectural patterns, microservices design, and scalable system
+                architectures. Emphasis on building maintainable, performant, and resilient software
+                systems.
+              </p>
+            </div>
+          </motion.div>
+        </motion.section>
+
+        <motion.section
+          className="research-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="section-header" variants={itemVariants}>
+            <FaFileAlt className="section-icon" />
+            <h2>Selected Publications</h2>
+          </motion.div>
+
+          <motion.div className="publications-list" variants={itemVariants}>
+            <div className="publication-item">
+              <span className="pub-year">2023</span>
+              <div className="pub-content">
+                <h3>Advanced Machine Learning Techniques for Data Profiling and Governance</h3>
+                <p className="pub-venue">Ph.D. Dissertation, IBN TOFAIL University</p>
+                <p className="pub-description">
+                  Comprehensive research on applying machine learning algorithms to automate data quality
+                  assessment, metadata management, and governance compliance in large-scale data systems.
+                </p>
+              </div>
+            </div>
+
+            <div className="publication-item">
+              <span className="pub-year">2022</span>
+              <div className="pub-content">
+                <h3>Intelligent Data Quality Assessment using Deep Learning</h3>
+                <p className="pub-venue">International Conference on AI and Data Science</p>
+                <p className="pub-description">
+                  Novel approach to automated data quality assessment using deep neural networks,
+                  achieving significant improvements in accuracy and efficiency.
+                </p>
+              </div>
+            </div>
+
+            <div className="publication-item">
+              <span className="pub-year">2021</span>
+              <div className="pub-content">
+                <h3>Security Patterns in Microservices Architectures</h3>
+                <p className="pub-venue">Journal of Software Engineering and Applications</p>
+                <p className="pub-description">
+                  Comprehensive analysis of security challenges in microservices and proposed
+                  architectural patterns for building secure distributed systems.
+                </p>
+              </div>
+            </div>
+
+            <div className="publication-item">
+              <span className="pub-year">2020</span>
+              <div className="pub-content">
+                <h3>DevSecOps: Integrating Security into CI/CD Pipelines</h3>
+                <p className="pub-venue">International Conference on DevOps and Cloud Computing</p>
+                <p className="pub-description">
+                  Framework for seamlessly integrating security practices into continuous integration
+                  and deployment workflows without compromising development velocity.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </motion.section>
+
+        <motion.section
+          className="research-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="section-header" variants={itemVariants}>
+            <FaUsers className="section-icon" />
+            <h2>Collaborations & Projects</h2>
+          </motion.div>
+
+          <motion.div className="projects-grid" variants={itemVariants}>
+            <div className="project-card">
+              <h3>AI-Powered Data Governance Platform</h3>
+              <p>
+                Developing an intelligent platform for automated data governance, quality monitoring,
+                and compliance management using advanced machine learning techniques.
+              </p>
+              <div className="project-tags">
+                <span>Machine Learning</span>
+                <span>Data Governance</span>
+                <span>Python</span>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <h3>Secure Microservices Framework</h3>
+              <p>
+                Creating a comprehensive framework for building secure, scalable microservices
+                applications with built-in security patterns and best practices.
+              </p>
+              <div className="project-tags">
+                <span>Microservices</span>
+                <span>Security</span>
+                <span>Spring Boot</span>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <h3>Automated DevSecOps Pipeline</h3>
+              <p>
+                Implementing an end-to-end DevSecOps pipeline with automated security testing,
+                vulnerability scanning, and compliance verification.
+              </p>
+              <div className="project-tags">
+                <span>DevSecOps</span>
+                <span>CI/CD</span>
+                <span>Kubernetes</span>
+              </div>
+            </div>
+          </motion.div>
+        </motion.section>
+
+        <motion.section
+          className="research-section collaboration-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="section-header" variants={itemVariants}>
+            <FaBook className="section-icon" />
+            <h2>Open for Collaboration</h2>
+          </motion.div>
+
+          <motion.div className="collaboration-content" variants={itemVariants}>
+            <p>
+              I am always interested in collaborating on research projects, supervising graduate
+              students, and partnering with industry on innovative AI and software engineering
+              initiatives. If you have a research idea or project proposal, feel free to reach out!
+            </p>
+            <div className="collaboration-areas">
+              <span>AI Research</span>
+              <span>Machine Learning Applications</span>
+              <span>Data Governance</span>
+              <span>Software Architecture</span>
+              <span>DevSecOps</span>
+              <span>Cloud Computing</span>
+            </div>
+          </motion.div>
+        </motion.section>
+      </div>
+    </div>
+  );
+};
+
+export default ResearchPage;

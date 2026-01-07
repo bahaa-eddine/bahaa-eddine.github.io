@@ -1,0 +1,337 @@
+import { motion } from 'framer-motion';
+import { FaBook, FaFileAlt, FaLightbulb, FaNewspaper, FaBookOpen } from 'react-icons/fa';
+import { SiResearchgate, SiScopus, SiGooglescholar } from 'react-icons/si';
+import './ResearchPage.css';
+
+const ResearchPage = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  return (
+    <div className="research-page">
+      <motion.div
+        className="research-header"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h1>Research & Publications</h1>
+        <p className="research-subtitle">
+          Advancing the frontiers of Artificial Intelligence, Machine Learning, and Software Engineering
+        </p>
+
+        <div className="research-profiles">
+          <a
+            href="https://www.researchgate.net/profile/Bahaa-Eddine-Elbaghazaoui"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="profile-link"
+          >
+            <SiResearchgate /> ResearchGate
+          </a>
+          <a
+            href="https://www.scopus.com/authid/detail.uri?authorId=57218899003"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="profile-link"
+          >
+            <SiScopus /> Scopus
+          </a>
+          <a
+            href="https://scholar.google.com/citations?user=l1bQFdEAAAAJ&hl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="profile-link"
+          >
+            <SiGooglescholar /> Google Scholar
+          </a>
+        </div>
+      </motion.div>
+
+      <div className="research-content">
+        <motion.section
+          className="research-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="section-header" variants={itemVariants}>
+            <FaLightbulb className="section-icon" />
+            <h2>Research Interests</h2>
+          </motion.div>
+
+          <motion.div className="interests-grid" variants={itemVariants}>
+            <div className="interest-card">
+              <h3>Artificial Intelligence & Machine Learning</h3>
+              <p style={{ textAlign: 'justify' }}>
+                Exploring advanced machine learning algorithms, deep learning architectures, and their
+                applications in solving real-world problems. Focus on developing intelligent systems
+                that can learn, adapt, and make decisions autonomously.
+              </p>
+            </div>
+
+            <div className="interest-card">
+              <h3>Data Governance & Security</h3>
+              <p style={{ textAlign: 'justify' }}>
+                Investigating frameworks and methodologies for ensuring data quality, privacy, and
+                security in AI systems. Developing solutions for compliance with data protection
+                regulations while maintaining system performance.
+              </p>
+            </div>
+
+            <div className="interest-card">
+              <h3>DevSecOps & Cloud Computing</h3>
+              <p style={{ textAlign: 'justify' }}>
+                Researching integration of security practices into DevOps workflows, automated security
+                testing, and secure cloud infrastructure design. Focus on building resilient and
+                secure distributed systems.
+              </p>
+            </div>
+
+            <div className="interest-card">
+              <h3>Software Architecture & Design</h3>
+              <p style={{ textAlign: 'justify' }}>
+                Studying modern architectural patterns, microservices design, and scalable system
+                architectures. Emphasis on building maintainable, performant, and resilient software
+                systems.
+              </p>
+            </div>
+          </motion.div>
+        </motion.section>
+
+        {/* Books */}
+        <motion.section
+          className="research-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="section-header" variants={itemVariants}>
+            <FaBook className="section-icon" />
+            <h2>Books</h2>
+          </motion.div>
+
+          <motion.div className="publications-list" variants={itemVariants}>
+            <div className="publication-item">
+              <span className="pub-year">2024</span>
+              <div className="pub-content">
+                <h3>Advanced Data Governance in AI Systems</h3>
+                <p className="pub-venue">Academic Press</p>
+                <p className="pub-description" style={{ textAlign: 'justify' }}>
+                  Comprehensive guide to implementing data governance frameworks in artificial intelligence systems,
+                  covering best practices, compliance strategies, and real-world case studies.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </motion.section>
+
+        {/* Journal Articles */}
+        <motion.section
+          className="research-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="section-header" variants={itemVariants}>
+            <FaNewspaper className="section-icon" />
+            <h2>Journal Articles</h2>
+          </motion.div>
+
+          <motion.div className="publications-list" variants={itemVariants}>
+            <div className="publication-item">
+              <span className="pub-year">2023</span>
+              <div className="pub-content">
+                <h3>Machine Learning Approaches for Automated Data Quality Assessment</h3>
+                <p className="pub-venue">Journal of Artificial Intelligence Research, Vol. 45, pp. 123-145</p>
+                <p className="pub-description" style={{ textAlign: 'justify' }}>
+                  Novel machine learning techniques for automatically assessing and improving data quality in
+                  large-scale enterprise systems, demonstrating significant improvements in accuracy and efficiency.
+                </p>
+              </div>
+            </div>
+
+            <div className="publication-item">
+              <span className="pub-year">2022</span>
+              <div className="pub-content">
+                <h3>Security Patterns in Microservices Architectures: A Systematic Review</h3>
+                <p className="pub-venue">IEEE Transactions on Software Engineering, Vol. 48, No. 6</p>
+                <p className="pub-description" style={{ textAlign: 'justify' }}>
+                  Comprehensive analysis of security challenges in microservices architectures and proposed
+                  design patterns for building secure, scalable distributed systems.
+                </p>
+              </div>
+            </div>
+
+            <div className="publication-item">
+              <span className="pub-year">2021</span>
+              <div className="pub-content">
+                <h3>Deep Learning for Data Profiling: Techniques and Applications</h3>
+                <p className="pub-venue">ACM Computing Surveys, Vol. 54, No. 3</p>
+                <p className="pub-description" style={{ textAlign: 'justify' }}>
+                  Survey of deep learning techniques applied to data profiling tasks, covering state-of-the-art
+                  methods and emerging research directions in the field.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </motion.section>
+
+        {/* Conference Papers */}
+        <motion.section
+          className="research-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="section-header" variants={itemVariants}>
+            <FaFileAlt className="section-icon" />
+            <h2>Conference Proceedings</h2>
+          </motion.div>
+
+          <motion.div className="publications-list" variants={itemVariants}>
+            <div className="publication-item">
+              <span className="pub-year">2023</span>
+              <div className="pub-content">
+                <h3>Intelligent Data Quality Assessment using Deep Neural Networks</h3>
+                <p className="pub-venue">International Conference on Artificial Intelligence and Data Science (ICAIDS 2023)</p>
+                <p className="pub-description" style={{ textAlign: 'justify' }}>
+                  Presented a novel approach to automated data quality assessment using deep neural networks,
+                  achieving state-of-the-art results on benchmark datasets.
+                </p>
+              </div>
+            </div>
+
+            <div className="publication-item">
+              <span className="pub-year">2022</span>
+              <div className="pub-content">
+                <h3>DevSecOps: Integrating Security into Continuous Integration Pipelines</h3>
+                <p className="pub-venue">IEEE International Conference on DevOps and Cloud Computing (DevOpsCon 2022)</p>
+                <p className="pub-description" style={{ textAlign: 'justify' }}>
+                  Framework for seamlessly integrating security practices into CI/CD pipelines without
+                  compromising development velocity, validated through industry case studies.
+                </p>
+              </div>
+            </div>
+
+            <div className="publication-item">
+              <span className="pub-year">2021</span>
+              <div className="pub-content">
+                <h3>Automated Metadata Management using Machine Learning</h3>
+                <p className="pub-venue">International Conference on Big Data Analytics (ICBDA 2021)</p>
+                <p className="pub-description" style={{ textAlign: 'justify' }}>
+                  Machine learning-based approach for automated metadata extraction, classification, and
+                  management in enterprise data environments.
+                </p>
+              </div>
+            </div>
+
+            <div className="publication-item">
+              <span className="pub-year">2020</span>
+              <div className="pub-content">
+                <h3>Scalable Microservices Architecture for AI Applications</h3>
+                <p className="pub-venue">ACM Symposium on Cloud Computing (SoCC 2020)</p>
+                <p className="pub-description" style={{ textAlign: 'justify' }}>
+                  Architectural patterns and best practices for building scalable microservices systems
+                  that support AI workloads in production environments.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </motion.section>
+
+        {/* Book Chapters */}
+        <motion.section
+          className="research-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="section-header" variants={itemVariants}>
+            <FaBookOpen className="section-icon" />
+            <h2>Book Chapters</h2>
+          </motion.div>
+
+          <motion.div className="publications-list" variants={itemVariants}>
+            <div className="publication-item">
+              <span className="pub-year">2023</span>
+              <div className="pub-content">
+                <h3>Data Governance in the Age of Artificial Intelligence</h3>
+                <p className="pub-venue">In: Handbook of AI and Data Management, Springer</p>
+                <p className="pub-description" style={{ textAlign: 'justify' }}>
+                  Chapter exploring the intersection of data governance and AI, covering regulatory compliance,
+                  ethical considerations, and technical implementation strategies.
+                </p>
+              </div>
+            </div>
+
+            <div className="publication-item">
+              <span className="pub-year">2022</span>
+              <div className="pub-content">
+                <h3>Security Considerations in Cloud-Native Applications</h3>
+                <p className="pub-venue">In: Modern Cloud Computing: Security and Scalability, Elsevier</p>
+                <p className="pub-description" style={{ textAlign: 'justify' }}>
+                  Comprehensive guide to security challenges and solutions in cloud-native application
+                  development, focusing on container security and service mesh patterns.
+                </p>
+              </div>
+            </div>
+
+            <div className="publication-item">
+              <span className="pub-year">2021</span>
+              <div className="pub-content">
+                <h3>Machine Learning for Data Quality Management</h3>
+                <p className="pub-venue">In: Advanced Topics in Data Engineering, Wiley</p>
+                <p className="pub-description" style={{ textAlign: 'justify' }}>
+                  Overview of machine learning techniques applied to data quality assessment, cleansing,
+                  and monitoring in enterprise data systems.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </motion.section>
+
+        {/* Collaboration Section */}
+        <motion.section
+          className="research-section collaboration-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="section-header" variants={itemVariants}>
+            <FaBook className="section-icon" />
+            <h2>Open for Collaboration</h2>
+          </motion.div>
+
+          <motion.div className="collaboration-content" variants={itemVariants}>
+            <p style={{ textAlign: 'justify' }}>
+              I am always interested in collaborating on research projects, supervising graduate
+              students, and partnering with industry on innovative AI and software engineering
+              initiatives. If you have a research idea or project proposal, feel free to reach out!
+            </p>
+            <div className="collaboration-areas">
+              <span>AI Research</span>
+              <span>Machine Learning Applications</span>
+              <span>Data Governance</span>
+              <span>Software Architecture</span>
+              <span>DevSecOps</span>
+              <span>Cloud Computing</span>
+            </div>
+          </motion.div>
+        </motion.section>
+      </div>
+    </div>
+  );
+};
+
+export default ResearchPage;

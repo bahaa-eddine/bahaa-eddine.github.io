@@ -1,0 +1,225 @@
+import { motion } from 'framer-motion';
+import { FaBriefcase, FaGraduationCap, FaAward, FaDownload } from 'react-icons/fa';
+import './ResumePage.css';
+
+const ResumePage = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  return (
+    <div className="resume-page">
+      <motion.div
+        className="resume-header"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h1>Resume</h1>
+        <p className="resume-subtitle">Professional Experience & Academic Background</p>
+        <a href="/resume/resume.pdf" download className="download-resume-btn">
+          <FaDownload /> Download Full Resume (PDF)
+        </a>
+      </motion.div>
+
+      <div className="resume-content">
+        <motion.section
+          className="resume-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="section-header" variants={itemVariants}>
+            <FaBriefcase className="section-icon" />
+            <h2>Professional Experience</h2>
+          </motion.div>
+
+          <motion.div className="timeline" variants={itemVariants}>
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <span className="timeline-date">2023 - Present</span>
+                <h3>Research Professor</h3>
+                <h4>ENSA Beni Mellal, Morocco</h4>
+                <ul>
+                  <li>Leading cutting-edge research in Artificial Intelligence and Machine Learning applications</li>
+                  <li>Supervising graduate students in advanced AI and software engineering projects</li>
+                  <li>Developing innovative curriculum for computer science and AI programs</li>
+                  <li>Publishing research in top-tier international conferences and journals</li>
+                  <li>Collaborating with industry partners on real-world AI implementation projects</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <span className="timeline-date">2018 - Present</span>
+                <h3>Senior Full-Stack Developer & Architect</h3>
+                <h4>Freelance & Consulting</h4>
+                <ul>
+                  <li>Architecting and developing enterprise-level applications using microservices architecture</li>
+                  <li>Implementing DevSecOps practices and CI/CD pipelines for automated deployment</li>
+                  <li>Designing scalable cloud solutions on AWS, Azure, and Google Cloud Platform</li>
+                  <li>Leading technical teams in agile development environments</li>
+                  <li>Providing technical consulting for digital transformation initiatives</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <span className="timeline-date">2017 - Present</span>
+                <h3>Technical Trainer & Mentor</h3>
+                <h4>Various Institutions & Organizations</h4>
+                <ul>
+                  <li>Conducting advanced training workshops on AI, Machine Learning, and DevOps</li>
+                  <li>Mentoring junior developers and engineering students in their career development</li>
+                  <li>Creating comprehensive training materials and hands-on practical exercises</li>
+                  <li>Delivering corporate training programs on modern software development practices</li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        </motion.section>
+
+        <motion.section
+          className="resume-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="section-header" variants={itemVariants}>
+            <FaGraduationCap className="section-icon" />
+            <h2>Education</h2>
+          </motion.div>
+
+          <motion.div className="timeline" variants={itemVariants}>
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <span className="timeline-date">2020 - 2023</span>
+                <h3>Ph.D. in Informatics & Artificial Intelligence</h3>
+                <h4>IBN TOFAIL University, Morocco</h4>
+                <ul>
+                  <li>Dissertation: Advanced machine learning techniques for data governance and security</li>
+                  <li>Published multiple peer-reviewed papers in international conferences</li>
+                  <li>Received excellence award for research contributions</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <span className="timeline-date">Earlier</span>
+                <h3>Master's & Bachelor's Degrees</h3>
+                <h4>Computer Science & Engineering</h4>
+                <ul>
+                  <li>Specialized in software engineering and distributed systems</li>
+                  <li>Graduated with honors and distinction</li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        </motion.section>
+
+        <motion.section
+          className="resume-section skills-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="section-header" variants={itemVariants}>
+            <FaAward className="section-icon" />
+            <h2>Technical Skills & Expertise</h2>
+          </motion.div>
+
+          <motion.div className="skills-grid" variants={itemVariants}>
+            <div className="skill-category">
+              <h3>Programming Languages</h3>
+              <div className="skill-tags">
+                <span>Java</span>
+                <span>Python</span>
+                <span>JavaScript/TypeScript</span>
+                <span>C/C++</span>
+                <span>SQL</span>
+              </div>
+            </div>
+
+            <div className="skill-category">
+              <h3>Frameworks & Technologies</h3>
+              <div className="skill-tags">
+                <span>Spring Boot</span>
+                <span>React</span>
+                <span>Angular</span>
+                <span>Node.js</span>
+                <span>Django</span>
+                <span>Flask</span>
+              </div>
+            </div>
+
+            <div className="skill-category">
+              <h3>AI & Machine Learning</h3>
+              <div className="skill-tags">
+                <span>TensorFlow</span>
+                <span>PyTorch</span>
+                <span>Scikit-learn</span>
+                <span>NLP</span>
+                <span>Computer Vision</span>
+                <span>Deep Learning</span>
+              </div>
+            </div>
+
+            <div className="skill-category">
+              <h3>DevOps & Cloud</h3>
+              <div className="skill-tags">
+                <span>Docker</span>
+                <span>Kubernetes</span>
+                <span>Jenkins</span>
+                <span>GitLab CI/CD</span>
+                <span>AWS</span>
+                <span>Azure</span>
+                <span>Terraform</span>
+              </div>
+            </div>
+
+            <div className="skill-category">
+              <h3>Databases</h3>
+              <div className="skill-tags">
+                <span>PostgreSQL</span>
+                <span>MongoDB</span>
+                <span>MySQL</span>
+                <span>Redis</span>
+                <span>Elasticsearch</span>
+              </div>
+            </div>
+
+            <div className="skill-category">
+              <h3>Architecture & Design</h3>
+              <div className="skill-tags">
+                <span>Microservices</span>
+                <span>Event-Driven</span>
+                <span>Domain-Driven Design</span>
+                <span>REST APIs</span>
+                <span>GraphQL</span>
+              </div>
+            </div>
+          </motion.div>
+        </motion.section>
+      </div>
+    </div>
+  );
+};
+
+export default ResumePage;

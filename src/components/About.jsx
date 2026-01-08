@@ -48,7 +48,7 @@ const About = () => {
           viewport={{ once: true }}
         >
           <motion.div className="about-image" variants={itemVariants}>
-            <img src="/assets/img/logo_avatar.png" alt="Prof. Bahaa Eddine ELBAGHAZAOUI" />
+            <img src="/assets/img/pic_professor.png" alt="Prof. Bahaa Eddine ELBAGHAZAOUI" />
           </motion.div>
 
           <motion.div className="about-details" variants={itemVariants}>

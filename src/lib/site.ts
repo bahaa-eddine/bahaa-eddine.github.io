@@ -1,14 +1,8 @@
 /**
  * Canonical site URL used for SEO (canonical links, sitemap, Open Graph).
- * On Vercel, set NEXT_PUBLIC_SITE_URL to your custom domain once you have one.
- * Otherwise the production *.vercel.app domain is detected automatically.
+ * Override with NEXT_PUBLIC_SITE_URL if you later attach a custom domain.
  */
-export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "http://localhost:3000")
-).replace(/\/$/, "");
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://bahaa-eddine.github.io").replace(/\/$/, "");
 
 export const SITE_NAME = "Bahaa Eddine Elbaghazaoui";
 

@@ -1,0 +1,61 @@
+name: Deploy to GitHub Pages
+
+# Builds the Next.js static export and publishes it to https://bahaa-eddine.github.io
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # allows a manual re-deploy from the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+          # Optional repository variables (Settings → Secrets and variables → Actions → Variables)
+          NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL }}
+          NEXT_PUBLIC_GA_ID: ${{ vars.GA_ID }}
+          NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
+          NEXT_PUBLIC_BING_SITE_VERIFICATION: ${{ vars.BING_SITE_VERIFICATION }}
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

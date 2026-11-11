@@ -126,7 +126,7 @@ export default function HomePage() {
               <div className="enter-t" style={{ "--d": "0.08s" } as CSSProperties}>
                 <div className="portrait">
                   <Image
-                    src="/hero-lectern.jpg"
+                    src="/hero-lectern.webp"
                     alt="Professor Bahaa Eddine Elbaghazaoui speaking at a lectern, holding a scientific publication"
                     fill
                     priority

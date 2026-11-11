@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next";
 import { NAV, SITE_URL } from "@/lib/site";
 import { books } from "@/data/books";
 
+// Required for `output: "export"` (GitHub Pages)
+export const dynamic = "force-static";
+
 /** Images listed per page help Google Images index photos and book covers. */
 const IMAGES: Record<string, string[]> = {
   "/": ["/hero-lectern.jpg", ...books.flatMap((b) => (b.cover ? [b.cover] : []))],

@@ -5,8 +5,8 @@
   "description": "Personal academic & engineering portfolio of Prof. Bahaa Eddine Elbaghazaoui.",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && node scripts/fix-export.mjs",
+    "start": "npx serve@14.2.4 out",
     "lint": "tsc --noEmit"
   },
   "dependencies": {

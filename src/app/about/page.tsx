@@ -31,10 +31,10 @@ export default function AboutPage() {
           <div className="about-photo enter-t">
             <div className="ph">
               <Image
-                src="/about-seminar.jpg"
+                src="/about-seminar.webp"
                 alt="Bahaa Eddine Elbaghazaoui attentively following a session at an academic seminar"
-                width={800}
-                height={800}
+                width={640}
+                height={640}
                 sizes="(max-width: 860px) 340px, 300px"
                 priority
               />
